@@ -7,7 +7,7 @@ name: Node.js Package
 on:
   push:
     branches:
-      - main
+      - dev
 
 # 按顺序运行作业
 jobs:
@@ -30,16 +30,11 @@ jobs:
       # 安装依赖，相当于 npm ci
       - name: Install dependencies 📦️
         run: npm install
-      # 执行构建步骤
-      - name: 构建
+      # 构建包
+      - name: Build package
         run: |
           npm run build
-      # 执行测试步骤
-      - name: 测试
+      # 单元测试
+      - name: Run unit tests
         run: |
           npm run test
-      # 发布
-      - run: npm publish
-        env:
-          # 刚刚设置的 NPM_TOKEN
-          NODE_AUTH_TOKEN: ${{secrets.NPM_TOKEN}}
