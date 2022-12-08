@@ -2,7 +2,7 @@
 
 NodeJS SoundPlayer
 
-========================
+====================================
 
 Supports the following sound players
 
@@ -47,7 +47,7 @@ This library also attempts to provide additional support for parameters such as 
 
 > sudo apt-get install alsa-base alsa-utils
 
-### Install Npm Package
+## Install Npm Package
 
 > npm install at-sound-player
 

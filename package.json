@@ -2,7 +2,11 @@
   "name": "at-sound-player",
   "version": "1.0.0",
   "description": "Nodejs soundplayer wrapper for several command line sound players (above). It is important to note that each of these players need to be installed before they can be used by the lib.",
-  "main": "index.js",
+  "main": "dist/index.js",
+  "types": "dist/types/index.d.ts",
+  "files": [
+    "dist"
+  ],
   "scripts": {
     "build": "tsc",
     "test": "mocha --reporter spec"
@@ -13,6 +17,7 @@
   },
   "keywords": [
     "nodejs",
+    "electron",
     "typescript",
     "aplay",
     "afplay",
