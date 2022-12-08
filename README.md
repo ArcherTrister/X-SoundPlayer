@@ -56,17 +56,18 @@ This library also attempts to provide additional support for parameters such as 
 ## Example Usage
 
 ```javascript
-import { soundplayer, PlayOptions } from "at-sound-player";
+import { join } from "path";
+import { soundPlayer, PlayOptions } from "at-sound-player";
 
 // All options
 const options: PlayOptions = {
-  soundPath: "C:\\Windows\\Media\\notify.wav",
+  soundPath: join(__dirname, "./test/audios/notify.wav"),
   volume: 2,
   time: 3,
 };
 
 // instantiation with options
-await soundplayer
+await soundPlayer
   .play(options)
   .then(() => {
     console.log("play success");

@@ -1,15 +1,17 @@
 "use strict";
 const expect = require("chai").expect;
-const soundplayer = require("../dist/index").soundplayer;
+const path = require("path");
+const soundPlayer = require("../dist/index").soundPlayer;
 
-describe("soundplayer test", () => {
+describe("soundPlayer test", () => {
   it("play", async () => {
+    console.log(soundPlayer);
     const options = {
-      soundPath: "C:\\Windows\\Media\\notify.wav",
+      soundPath: path.join(__dirname, "./audios/notify.wav"),
       volume: 2,
       time: 3,
     };
-    const result = await soundplayer
+    const result = await soundPlayer
       .play(options)
       .then(() => {
         return true;
