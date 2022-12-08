@@ -13,7 +13,7 @@ on:
 jobs:
   publish-gpr:
     # 指定的运行器环境
-    runs-on: ubuntu-latest
+    runs-on: windows-latest
     # 设置 node 版本
     strategy:
       matrix:
