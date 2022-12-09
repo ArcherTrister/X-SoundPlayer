@@ -3,7 +3,7 @@
     /* Visit https://aka.ms/tsconfig to read more about this file */
     "lib": ["es2019", "esnext", "dom"],
     "outDir": "dist",
-    "declarationDir": "dist/types",
+    "declarationDir": "dist",
     "sourceMap": false,
     "moduleResolution": "node",
     "noUnusedLocals": true,
