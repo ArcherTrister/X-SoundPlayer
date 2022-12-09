@@ -4,13 +4,13 @@ const path = require("path");
 const soundPlayer = require("../dist/index").soundPlayer;
 
 describe("soundPlayer test", () => {
+  const options = {
+    soundPath: path.join(__dirname, "./audios/notify.wav"),
+    volume: 2,
+    time: 2,
+  };
   it("play", async () => {
-    const options = {
-      soundPath: path.join(__dirname, "./audios/notify.wav"),
-      volume: 2,
-      time: 2,
-    };
-    // console.time();
+    console.time("play");
     const result = await soundPlayer
       .play(options)
       .then(() => {
@@ -21,6 +21,13 @@ describe("soundPlayer test", () => {
         return false;
       });
     expect(result).to.equal(true);
-    // console.timeEnd();
+    console.timeEnd("play");
+  }).timeout(200000);
+
+  it("playAsync", async () => {
+    console.time("playAsync");
+    const result = await soundPlayer.playAsync(options);
+    expect(result.stderr).to.equal("");
+    console.timeEnd("playAsync");
   }).timeout(200000);
 });

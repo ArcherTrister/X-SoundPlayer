@@ -75,6 +75,12 @@ await soundPlayer
   .catch((error) => {
     console.error("play fail");
   });
+
+// or
+const result = await soundPlayer.playAsync(options);
+if (result.stderr) {
+  console.error("play fail");
+}
 ```
 
 ### See the tests folder for more samples.
