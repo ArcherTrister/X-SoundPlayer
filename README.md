@@ -49,15 +49,15 @@ This library also attempts to provide additional support for parameters such as 
 
 ## Install Npm Package
 
-> npm install at-sound-player
+> npm install x-sound-player
 
-> yarn add at-sound-player
+> yarn add x-sound-player
 
 ## Example Usage
 
 ```javascript
 import { join } from "path";
-import { soundPlayer, PlayOptions } from "at-sound-player";
+import { soundPlayer, PlayOptions } from "x-sound-player";
 
 // All options
 const options: PlayOptions = {
