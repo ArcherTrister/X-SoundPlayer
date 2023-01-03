@@ -1,17 +1,18 @@
 # This workflow will run tests using node and then publish a package to GitHub Packages when a release is created
 # For more information see: https://docs.github.com/en/actions/publishing-packages/publishing-nodejs-packages
 
-name: Node.js Package
+name: Node.js Package Test
 
 # 触发工作流程的事件
 on:
   push:
     branches:
       - dev
+      - main
 
 # 按顺序运行作业
 jobs:
-  publish-gpr:
+  test-gpr:
     # 指定的运行器环境
     runs-on: windows-latest
     # 设置 node 版本
