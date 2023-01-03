@@ -12,7 +12,7 @@ on:
 
 # 按顺序运行作业
 jobs:
-  test-gpr:
+  test:
     # 指定的运行器环境
     runs-on: windows-latest
     # 设置 node 版本
